@@ -9,3 +9,10 @@ Write-Host "creating a folder " -ForegroundColor Green
 }
 write-host " successfully deleted" -ForegroundColor Cyan
 $Error[0].Exception.Message
+
+help *scheduled*
+Get-ScheduledTask 
+
+Get-ScheduledTask | where {$_.taskname -eq "restart"}
+
+Unregister-ScheduledTask -TaskName "restart"
