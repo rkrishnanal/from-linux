@@ -10,5 +10,5 @@ $disk= Get-CimInstance -ClassName Win32_LogicalDisk
 foreach ($local in $disk) {
     $drivename = $disk.DeviceID
     $gb=[System.Math]::Round(($local.Size/1GB),2)
-    Write-Host "$drivename | size (ing GB) : $gb" | fl
+    Write-Host "$drivename | size (in GB) : $gb" | fl
 }
