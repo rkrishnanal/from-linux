@@ -64,3 +64,6 @@ Push-Location -Path D:\
 
 #pop
 Pop-Location #get back to the original location
+
+#New-item commands is used to create files and folder 
+# -force is create intermediate files and overwrite file is exist

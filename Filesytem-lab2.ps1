@@ -12,3 +12,6 @@ foreach ($local in $disk) {
     $gb=[System.Math]::Round(($local.Size/1GB),2)
     Write-Host "$drivename | size (in GB) : $gb" | fl
 }
+
+#ADDS 
+Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath C:\Windows\NTDS -DomainMode WinThreshold -DomainName "itraki.co.in" -DomainNetbiosName "itraki" -ForestMode WinThreshold -InstallDns:$true -LogPath C:\Windows\NTDS -NoRebootOnCompletion:$true -SafeModeAdministratorPassword $password -SysvolPath C:\Windows\SYSVOL -Force:$true
