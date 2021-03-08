@@ -45,3 +45,22 @@ Write-Host "All Well" -ForegroundColor Green
 else {
     Write-Host "We are not good to go" -ForegroundColor Red
 }
+
+#Get-PSDrive  list all drives as default
+Get-PSDrive
+Get-PSDrive -PSProvider Registry
+
+Get-PSDrive -PSProvider FileSystem
+
+#custom psdrive
+
+New-PSDrive -Name installedsoftware -PSProvider Registry -Root HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
+#working Directory
+Get-ChildItem
+
+#Push 
+Push-Location -Path D:\
+
+#pop
+Pop-Location #get back to the original location
