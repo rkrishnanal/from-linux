@@ -46,3 +46,5 @@ Get-ChildItem -Path . -Force
 Get-ChildItem . -File|Sort-Object -Property CreationTime -Descending |select create*,name -First 4
 
 Remove-Item -Path .\file2.txt -Force
+Remove-Item -Path .\hidden1.txt -Force
+
