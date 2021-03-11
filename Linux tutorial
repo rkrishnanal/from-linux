@@ -1,0 +1,32 @@
+# ./ "root the op of the file system  hierarchy"
+/bin Binaries and other executables programs.
+/etc system configuration files
+/ home home directories
+/opt Optional or third party softwars
+/ tmp Temporary space,
+/usr User related programs
+/var var data, most notably log files
+
+BASIC COMMANDS
+ls = List directory content
+cd = change the current
+pwd Display the present working directory
+cat=concatnatd 
+echo=display 
+man= disokay the online manual
+giz -h compress or uncompress files
+
+. This directory
+.. the parent directory
+cd - change to the previous directory 
+
+/ directory forward slash
+mkdir[-p] - create a directory
+rmdir [-p] - remove a directory
+rm -rf directory -recursively removes directory
+ls -F to reveal file type
+ / directory
+ @ Link
+ * executables
+ ls -d list directories
+ ls --color Colorize the output.
