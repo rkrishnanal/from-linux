@@ -25,3 +25,24 @@ gci . | Tee-Object  .\file1.txt |Measure-Object
  # > Send specificed stream a file
  # >> -Append specificed stream to file
  ping 8.8.8.8 > .\test1.txt
+
+
+ #Lisiting demo 2
+
+Remove-Item .\* -Recurse -Force
+New-Item -Path .\DIR_D1\DIR_D2\DIR_D3\DIR_D4 -ItemType Directory
+tree.com
+1..2| % {New-Item -Path . -Name "$("file" + "$_").txt"-ItemType File}
+1..2| % {New-Item -Path .\dir* -Name "$("file" + "$_").txt"-ItemType File} 
+1..2| % {New-Item -Path .\dir*\dir* -Name "$("file" + "$_").txt"-ItemType File}
+(New-Item . -Name hidden1.txt -ItemType File).Attributes +='Hidden'
+
+Get-ChildItem -Path . -Name
+
+Get-ChildItem . -File
+Get-ChildItem . -Directory
+Get-ChildItem -Path . -Force
+
+Get-ChildItem . -File|Sort-Object -Property CreationTime -Descending |select create*,name -First 4
+
+Remove-Item -Path .\file2.txt -Force
