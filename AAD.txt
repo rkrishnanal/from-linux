@@ -1,0 +1,6 @@
+# Groups two types
+cloud groups  >> Groups created directly from azure
+Symced Groups >> Synced from on prem
+
+#DEVICE REGISTERED
+#dsregcmd /status  to check the whether domin joined or not
