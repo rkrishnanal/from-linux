@@ -4,3 +4,45 @@ Symced Groups >> Synced from on prem
 
 #DEVICE REGISTERED
 #dsregcmd /status  to check the whether domin joined or not
+
+# Identity -- An object that can be authenicated
+#Account -- An Identitythat has data assoicated with Identity
+#Azure Ad account -- An Identity created throught Ad or another ms cloud service
+#Aure tenant -- A dedicated and trusted instance of azure Ad
+# Azure Ad directory -- Each Azure tenant has dedicated and trusted 
+#USer subscription Used to pay for Azure cloud services.
+
+# MFA (Multifactor Authentication) 
+#condition-when this happens
+#Access Controls -- "Then do this"
+#Lets you enforce controls on access to apps based on specific condtion 
+
+#resource indpedsance 
+#Administratie
+
+AZURE POLICY
+
+#Management Groups
+  Provide a lvel of scope above subscription
+Usage CAse 
+  1.Allowed resource types
+  2. Allowed vm
+  3. Allowed location
+  4. Require tag and its value
+  5. Azure backup should be enabled for vm
+  Advantages:
+  Enforcement and compliance 
+  Apply policies at scale 
+  Remediation
+
+  Azure policy is service in azure that you use to create assign and manage policy
+  Azure policy runs evaluation and scans for non-com[laint resource]
+
+#ROLE-BAsed Access Control
+ Process of binding a role definition to a user,group, or serivce 
+ principal at a scopre for the purpose of granting access
+
+ Owner >> Has full access to all resource
+ Contributor >> Creates and manages all tyoes of azure resources
+ Reader >> Views Azure resources
+ User Access Administrator >> Manages user access to Azure resources.
