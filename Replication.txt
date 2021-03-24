@@ -1,0 +1,29 @@
+1. Routable ip address
+2. Dns
+3. Rpc 
+4. kerberos version v5 Authentication --Authentication and replication
+LDAP
+Netlogon 
+Intermessaging 
+
+Synatx
+repadmin /replicate destination_dsasource_dsa [/force][async]
+repadmin /replicate destination-dsa[/force] 
+
+Display the amount of time between replications
+repadmin /sho
+
+repadmin /shouutdvex /latency.
+
+Root Cause
+
+Network Connectivity 
+Dns issue 
+Authentication and authoirization
+Directory database
+
+GENERAL APPROACH
+Monitor replicatin health  Use repadmin.exe
+Reported failure in a timely manner
+Software might be issue
+Reinstall active directory
