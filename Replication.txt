@@ -1,3 +1,10 @@
+Replication is the contiouns copy of data changes from one databse to another database
+Intra-stite replication >> This happens in the stite,replicate is less than  one minute ,ring toplogy and endless replication loops
+
+intersite replication >> More than one site is always benfited with from the high speed  links 
+Every site have bridge-head server for the replication 
+
+
 1. Routable ip address
 2. Dns
 3. Rpc 
@@ -27,3 +34,39 @@ Monitor replicatin health  Use repadmin.exe
 Reported failure in a timely manner
 Software might be issue
 Reinstall active directory
+
+Force Active directory Iin dsrm 
+Reinstall the operating system and rebuild the domain controller.
+
+TO CHECK THE BACK STATUS COMMAND
+
+wbadmin get status
+
+#backup
+1.Normal backup (Full Back)
+2 Incremental backup [on After Changes from the last backup
+3 Differential backup
+4 copy backup
+5 Daily backup
+
+#Creating snapshot
+
+ntdsutil
+snapshot
+activate instance ntds
+create
+
+
+#SERVER HARDDENING
+
+Invovles identifcation and remediating  security vulnerabulities.
+1.Organzitional Security : Validate the hardware and Software
+2. Windows Server preparation: Keepupdate and protection
+3. Windows Server Installation: Enable automatic notification of patch availability.
+ Whenever a patch is released, it should be analyzed, tested and applied in a timely manner using WSUS or SCCM.
+ 
+
+#GROUP POLICY
+Centralized management system of user and computer to control os,user setting and ad.
+
+ Removes DNS records that have an outdated timestamp based on the time configured.
