@@ -1,7 +1,7 @@
-$IP = "10.10.10.10"
+$IP = "10.2.1.169"
 $MaskBits = 24 # This means subnet mask = 255.255.255.0
-$Gateway = "10.10.10.1"
-$Dns = "10.10.10.100"
+$Gateway = "10.2.1.254"
+$Dns = "10.2.1.169"
 $Dns2=""
 $IPType = "IPv4"
 # Retrieve the network adapter that you want to configure

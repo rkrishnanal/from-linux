@@ -1,0 +1,100 @@
+Replication is the contiouns copy of data changes from one databse to another database
+Intra-stite replication >> This happens in the stite,replicate is less than  one minute ,ring toplogy and endless replication loops
+
+intersite replication >> More than one site is always benfited with from the high speed  links 
+Every site have bridge-head server for the replication 
+
+
+1. Routable ip address
+2. Dns
+3. Rpc 
+4. kerberos version v5 Authentication --Authentication and replication
+LDAP
+Netlogon 
+Intermessaging 
+
+Synatx
+repadmin /replicate destination_dsasource_dsa [/force][async]
+repadmin /replicate destination-dsa[/force] 
+
+Display the amount of time between replications
+repadmin /sho
+
+repadmin /shouutdvex /latency.
+
+Root Cause
+
+Network Connectivity 
+Dns issue 
+Authentication and authoirization
+Directory database
+
+GENERAL APPROACH
+Monitor replicatin health  Use repadmin.exe
+Reported failure in a timely manner
+Software might be issue
+Reinstall active directory
+
+Force Active directory Iin dsrm 
+Reinstall the operating system and rebuild the domain controller.
+
+TO CHECK THE BACK STATUS COMMAND
+
+wbadmin get status
+
+#backup
+1.Normal backup (Full Back)
+2 Incremental backup [on After Changes from the last backup
+3 Differential backup
+4 copy backup
+5 Daily backup
+
+#Creating snapshot
+
+ntdsutil
+snapshot
+activate instance ntds
+create
+
+
+#SERVER HARDDENING
+
+Invovles identifcation and remediating  security vulnerabulities.
+1.Organzitional Security : Validate the hardware and Software
+2. Windows Server preparation: Keepupdate and protection
+3. Windows Server Installation: Enable automatic notification of patch availability.
+ Whenever a patch is released, it should be analyzed, tested and applied in a timely manner using WSUS or SCCM.
+ 
+
+#GROUP POLICY
+Centralized management system of user and computer to control os,user setting and ad.
+
+ DNS
+ Primary zone :This is the main zone and has a read/write copy of the zone data. All changes to the zone are made in the primary zone and are replicated to the secondary zones.
+
+The zone data is stored in a text file located in this folder c:\windows\system32\DNS on the Windows server running DNS.
+
+ Secondary zone : A secondary Zone is a read-only copy of the primary zone. 
+ This zone cannot process updates and can only retrieve updates from the primary zone.  This zone can answer DNS name resolution queries from clients nodes, this helps reduce the workload on the primary zone. Secondary zones cannot be active directory integrated.
+
+ Stub zone :
+
+ FSMO ROLES
+ Schema Master: The Schema Master role manages the read-write copy of your Active Directory schema. 
+ The AD Schema defines all the attributes – things like employee ID, phone number, email address, and login name – that you can apply to an object in your AD database.
+
+Domain Naming Master: The Domain Naming Master makes sure that you don’t create a second domain in the same forest with the same name as another. 
+t is the master of your domain names. Creating new domains isn’t something that happens often, so of all the roles, 
+this one is most likely to live on the same DC with another role.
+
+RID Master: The Relative ID Master assigns blocks of Security Identifiers (SID) to different DCs they can use for newly created objects. 
+Each object in AD has an SID, and the last few digits of the SID are the Relative portion. In order to keep multiple objects from having the same SID, 
+the RID Master grants each DC the privilege of assigning certain SIDs.
+
+PDC Emulator: The DC with the Primary Domain Controller Emulator role is the authoritative DC in the domain. 
+The PDC Emulator responds to authentication requests, changes passwords, and manages Group Policy Objects. 
+And the PDC Emulator tells everyone else what time it is! It’s good to be the PDC.
+
+Infrastructure Master: The Infrastructure Master role translates Globally Unique Identifiers (GUID), SIDs, and Distinguished Names (DN) between domains. 
+If you have multiple domains in your forest, the Infrastructure Master is the Babelfish that lives between them. 
+If the Infrastructure Master doesn’t do its job correctly you will see SIDs in place of resolved names in your Access Control Lists (ACL).
