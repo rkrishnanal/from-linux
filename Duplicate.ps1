@@ -15,3 +15,5 @@ Get-ADComputer -Filter *| ForEach-Object {Get-CimInstance -ClassName Win32_BIOS 
 Select-Object PSComputerName ,SerialNumber
 
  
+#Eventlog
+Get-EventLog
